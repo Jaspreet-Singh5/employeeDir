@@ -1,24 +1,26 @@
-<div class="flex gap-3 items-start">
+<form (ngSubmit)="handleSearch($event)" [formGroup]="person">
+  <div class="flex gap-3 items-start">
     <mat-form-field>
-      <mat-label>First Name</mat-label>
-      <input matInput />
+      <mat-label>Name</mat-label>
+      <input matInput formControlName="name" />
     </mat-form-field>
-    
+
     <mat-form-field>
       <mat-label>Phone Number</mat-label>
-      <input matInput />
+      <input matInput formControlName="phoneNumber" />
     </mat-form-field>
-    
+
     <mat-form-field>
       <mat-label>Position</mat-label>
-      <mat-select>
+      <mat-select formControlName="position">
         <mat-option value="one">First option</mat-option>
         <mat-option value="two">Second option</mat-option>
       </mat-select>
     </mat-form-field>
-    
-    <button matFab aria-label="Example icon button with a delete icon">
-        <mat-icon class="text-2xl m-3">search</mat-icon>
+
+    <button matFab aria-label="Search button" type="submit">
+      <mat-icon class="text-2xl m-3">search</mat-icon>
     </button>
-</div>
+  </div>
+</form>
 
