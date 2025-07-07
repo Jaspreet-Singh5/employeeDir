@@ -11,11 +11,14 @@ import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatButtonModule } from '@angular/material/button';
 import { MatIconModule } from '@angular/material/icon';
 import { ReactiveFormsModule } from '@angular/forms';
+import { DataTableComponent } from './data-table/data-table.component';
+import { MatTableModule } from '@angular/material/table';
 
 @NgModule({
   declarations: [
     AppComponent,
-    SearchPanelComponent
+    SearchPanelComponent,
+    DataTableComponent
   ],
   imports: [
     BrowserModule,
@@ -27,6 +30,7 @@ import { ReactiveFormsModule } from '@angular/forms';
     MatButtonModule,
     MatIconModule,
     ReactiveFormsModule,
+    MatTableModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
