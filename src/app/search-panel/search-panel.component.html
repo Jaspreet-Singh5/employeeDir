@@ -1,1 +1,24 @@
-<p>search-panel works!</p>
+<div class="flex gap-3 items-start">
+    <mat-form-field>
+      <mat-label>First Name</mat-label>
+      <input matInput />
+    </mat-form-field>
+    
+    <mat-form-field>
+      <mat-label>Phone Number</mat-label>
+      <input matInput />
+    </mat-form-field>
+    
+    <mat-form-field>
+      <mat-label>Position</mat-label>
+      <mat-select>
+        <mat-option value="one">First option</mat-option>
+        <mat-option value="two">Second option</mat-option>
+      </mat-select>
+    </mat-form-field>
+    
+    <button matFab aria-label="Example icon button with a delete icon">
+        <mat-icon class="text-2xl m-3">search</mat-icon>
+    </button>
+</div>
+
