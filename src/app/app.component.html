@@ -2,7 +2,14 @@
   <app-search-panel (employees)="handleEmployeesResult($event)" />
 </div>
 
-<div class="m-4">
-  <app-data-table [employees]="employees" />
+<div *ngIf="!employees.length; else elseTemplate" class="text-center text-red-500 my-4">
+  No employees found.
 </div>
+
+<ng-template #elseTemplate>
+  <div class="m-4">
+    <app-data-table [employees]="employees" />
+  </div>
+</ng-template>
+
 <router-outlet></router-outlet>

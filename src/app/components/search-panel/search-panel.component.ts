@@ -14,7 +14,7 @@ export class SearchPanelComponent {
 
   // handle employee search details
   employee = new FormGroup({
-    name: new FormControl(),
+    firstName: new FormControl(),
     phoneNumber: new FormControl(),
     position: new FormControl(),
   });
@@ -43,7 +43,7 @@ export class SearchPanelComponent {
       })
       .subscribe({
         next: employees => {
-          this.employees.emit(employees)
+          this.employees.emit(employees);
         },
         error: err => {
           console.error(err);

@@ -1,8 +1,9 @@
 <form (ngSubmit)="handleSearch($event)" [formGroup]="employee">
   <div class="flex gap-3 items-start">
     <mat-form-field>
-      <mat-label>Name</mat-label>
-      <input matInput formControlName="name" />
+      <mat-label>First Name</mat-label>
+      <input matInput formControlName="firstName" />
+      <mat-hint>Case sensitive and exact match only</mat-hint>
     </mat-form-field>
 
     <mat-form-field>
