@@ -1,5 +1,6 @@
-import { Component } from '@angular/core';
+import { Component, Output, EventEmitter } from '@angular/core';
 import { FormControl, FormGroup } from '@angular/forms';
+import { Employee } from 'src/app/dto/employees.dto';
 import { EmployeesService } from 'src/app/services/employees.service';
 
 @Component({
@@ -9,6 +10,14 @@ import { EmployeesService } from 'src/app/services/employees.service';
 })
 export class SearchPanelComponent {
   positions: string[] = [];
+  @Output() employees = new EventEmitter<Employee[]>();
+
+  // handle employee search details
+  employee = new FormGroup({
+    name: new FormControl(),
+    phoneNumber: new FormControl(),
+    position: new FormControl(),
+  });
 
   constructor(private _employeesService: EmployeesService) {}
 
@@ -25,13 +34,6 @@ export class SearchPanelComponent {
     });
   }
 
-  // handle employee search details
-  employee = new FormGroup({
-    name: new FormControl(),
-    phoneNumber: new FormControl(),
-    position: new FormControl(),
-  });
-
   handleSearch(e: Event): void {
     e.preventDefault();
 
@@ -40,7 +42,8 @@ export class SearchPanelComponent {
         ...this.employee.value,
       })
       .subscribe({
-        next: res => {
+        next: employees => {
+          this.employees.emit(employees)
         },
         error: err => {
           console.error(err);
