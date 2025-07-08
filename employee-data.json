@@ -100,5 +100,6 @@
     { "firstName": "Sophie", "lastName": "Hamilton", "address": "466 Birch St", "phoneNumber": "555-0098", "position": "Manager" },
     { "firstName": "Trent", "lastName": "Graham", "address": "567 Elm Blvd", "phoneNumber": "555-0099", "position": "Designer" },
     { "firstName": "Ursula", "lastName": "Sullivan", "address": "668 Willow Dr", "phoneNumber": "555-0100", "position": "Support" }
-  ]
+  ],
+  "positions": ["Manager", "Developer", "Designer", "Tester", "Support", "HR"]
 }

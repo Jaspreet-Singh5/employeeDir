@@ -25,4 +25,8 @@ export class EmployeesService {
 
     return this._http.get<Employee[]>(`http://localhost:3000/employees${params ? '?' + params : ''}`);
   }
+
+  getPositions(): Observable<string[]> {
+    return this._http.get<string[]>(`http://localhost:3000/positions`);
+  }
 }
