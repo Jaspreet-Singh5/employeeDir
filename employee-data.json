@@ -1,5 +1,5 @@
 {
-  "employee": [
+  "employees": [
     { "firstName": "John", "lastName": "Doe", "address": "123 Main St", "phoneNumber": "555-0001", "position": "Manager" },
     { "firstName": "Jane", "lastName": "Smith", "address": "456 Oak Ave", "phoneNumber": "555-0002", "position": "Developer" },
     { "firstName": "Alice", "lastName": "Johnson", "address": "789 Pine Rd", "phoneNumber": "555-0003", "position": "Designer" },
