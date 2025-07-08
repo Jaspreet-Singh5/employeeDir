@@ -1,12 +1,5 @@
 import { Component } from '@angular/core';
-
-export interface Employee {
-  firstName: string;
-  lastName: string;
-  address: string;
-  phoneNumber: string;
-  position: string;
-}
+import { Employee } from '../../dto/employees.dto';
 
 const EMPLOYEE_DATA: Employee[] = [
   { firstName: 'John', lastName: 'Doe', address: '123 Main St', phoneNumber: '555-1234', position: 'Manager' },

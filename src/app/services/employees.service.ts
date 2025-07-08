@@ -1,6 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { Employee } from '../components/data-table/data-table.component';
+import { SearchEmployeeDto } from '../dto/employees.dto';
 import { Observable } from 'rxjs';
 
 @Injectable({
@@ -9,6 +9,7 @@ import { Observable } from 'rxjs';
 export class EmployeesService {
   constructor(private _http: HttpClient) {}
 
-  getEmployee(employee: Employee): Observable<Employee> {
+  getEmployee(employee: SearchEmployeeDto): Observable<any> {
+    return this._http.get(`http://localhost:3000/employees?position=${employee.position}`);
   }
 }

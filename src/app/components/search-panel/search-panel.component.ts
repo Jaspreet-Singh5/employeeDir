@@ -12,17 +12,15 @@ export class SearchPanelComponent {
 
   // handle employee search details
   employee = new FormGroup({
-    name: new FormControl(''),
+    name: new FormControl(),
     phoneNumber: new FormControl(),
-    position: new FormControl(''),
+    position: new FormControl(),
   });
 
   handleSearch(e: Event): void {
     e.preventDefault();
     this._employeesService.getEmployee({
       ...this.employee.value,
-      firstName: this.employee.value.name ?? '',
-      position: this.employee.value.position ?? '',
     }).subscribe({
       next: (res) => {
       },
