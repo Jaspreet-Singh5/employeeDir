@@ -1,6 +1,7 @@
 import { Component, Output, EventEmitter } from '@angular/core';
 import { FormControl, FormGroup } from '@angular/forms';
 import { Employee } from 'src/app/dto/employees.dto';
+import { Entity } from 'src/app/dto/entity.dto';
 import { EmployeesService } from 'src/app/services/employees.service';
 
 @Component({
@@ -9,7 +10,7 @@ import { EmployeesService } from 'src/app/services/employees.service';
   styleUrls: ['./search-panel.component.scss'],
 })
 export class SearchPanelComponent {
-  positions: string[] = [];
+  positions: Entity[] = [];
   @Output() employees = new EventEmitter<Employee[]>();
 
   // handle employee search details

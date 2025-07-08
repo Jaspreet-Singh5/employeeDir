@@ -2,6 +2,7 @@ import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Employee, SearchEmployeeDto } from '../dto/employees.dto';
 import { Observable } from 'rxjs';
+import { Entity } from '../dto/entity.dto';
 
 @Injectable({
   providedIn: 'root',
@@ -26,7 +27,7 @@ export class EmployeesService {
     return this._http.get<Employee[]>(`http://localhost:3000/employees${params ? '?' + params : ''}`);
   }
 
-  getPositions(): Observable<string[]> {
-    return this._http.get<string[]>(`http://localhost:3000/positions`);
+  getPositions(): Observable<Entity[]> {
+    return this._http.get<Entity[]>(`http://localhost:3000/positions`);
   }
 }
