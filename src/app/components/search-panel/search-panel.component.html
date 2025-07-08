@@ -10,6 +10,7 @@
 
       <mat-form-field class="flex-1 min-w-[180px]">
         <mat-label>Phone Number</mat-label>
+        <input matInput formControlName="phoneNumber" placeholder="e.g. 555-1234" type="tel" />
         <mat-icon matSuffix>phone</mat-icon>
         <mat-error *ngIf="employee.get('phoneNumber')?.invalid && (employee.get('phoneNumber')?.dirty || employee.get('phoneNumber')?.touched)">
           Invalid phone number.
